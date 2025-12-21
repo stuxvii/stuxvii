@@ -27,7 +27,7 @@ i feel so sigma!
 they/them ar gentinian
 <br>
 ### contact
-[https://t.me/acidbox93](Telegram)
+[Telegram](https://t.me/acidbox93)
 <br>
 [SimpleX](https://smp18.simplex.im/a#Y_8nW6diBoByt6U3BWHaTmIRFPTHnHXMWNcxTMYxAAQ)
 <br>
