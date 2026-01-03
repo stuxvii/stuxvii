@@ -23,8 +23,7 @@ i feel so sigma!
 i feel so sigma!
 i feel so sigma!
 i feel so sigma!
-<br>
-they/them ar gentinian
+
 <br>
 ### contact
 [Telegram](https://t.me/acidbox93)
