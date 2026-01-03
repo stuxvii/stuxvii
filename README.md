@@ -23,8 +23,8 @@ i feel so sigma!
 i feel so sigma!
 i feel so sigma!
 i feel so sigma!
-
 <br>
+
 ### contact
 [Telegram](https://t.me/acidbox93)
 <br>
