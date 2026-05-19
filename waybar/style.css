@@ -1,109 +1,203 @@
+@import "colors.css";
+
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    transition: 0s;
+    font-family: Terminus;
+    font-size: 12px;
+    min-height: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    /* background-color: @bg; */
 }
 
-window#waybar {
-    background-color: #000;
-    color: #ffffff;
+#waybar {
+    background-color: @bg;
+    color: @white;
+    border-radius: 0px;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
 
 button {
+    box-shadow: none; /* Remove predefined box-shadow */
+    text-shadow: none; /* Remove predefined text-shadow */
+    background: none; /* Remove predefined background color (white) */
+    transition: none; /* Disable predefined animations */
     border: none;
+}
+
+button:hover {
+    box-shadow: none; /* Remove predefined box-shadow */
+    text-shadow: none; /* Remove predefined text-shadow */
+    background: none; /* Remove predefined background color (white) */
+    transition: none; /* Disable predefined animations */
+    border: none;
+}
+
+tooltip {
+    padding: 0;
+    margin: 0;
+    background-color: @bg;
+    color: @white;
+    border-width: 0px;
+    border-color: @white;
+    border-radius: 0px;
+}
+
+tooltip label {
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    color: @white;
+}
+
+.modules-left {
+    background-color: inherit;
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    background-color: rgba(54, 0, 0, 1.0);
+.modules-center {
+    background-color: inherit;
+    border-radius: 0;
 }
 
-#workspaces button {
-    padding: 2px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#workspaces button.focused {
-    background-color: #666666;
-}
-
-#workspaces button:hover {
-    box-shadow: 
-    inset 1px 1px #ffffff,
-    inset -1px -1px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-* {
-    padding: 0 0px;
-    color: #ffffff;
+.modules-right {
+    background-color: inherit;
+    border-radius: 0;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
+    padding-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
+    padding-right: 0;
 }
 
-#clock {
-    margin-top: .35rem;
-    background-color: #000;
+#workspaces, #tags {
+    margin: 0;
 }
 
-label:focus {
-    background-color: #000000;
+#workspaces button, #tags button {
+    border-radius: 0px;
+    padding: 0 6px 0 6px;
+    color: @white;
+    background-color: @bg;
 }
 
-#network {
-    background-color: #000;
+#workspaces button:hover, #tags button:hover {
+    color: @white;
+    background-color: @highlight;
 }
 
-#network.disconnected {
-    background-color: #f53c3c;
+#workspaces button.focused, #tags button.focused, #workspaces button.active, #tags button.active {
+    font-size: 21;
+    background-color: @highlight;
 }
 
-#pulseaudio {
-    background-color: #000;
-    color: #fff;
+#workspaces button.urgent, #tags button.urgent {
+    color: @bg;
+    background-color: @alert;
 }
 
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+#window {
+    padding: 0 0px 0 4px;
+    background-color: @bg;
 }
 
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+#window.empty, #window.solo {
+    padding: 0;
+    background-color: @bg;
 }
 
-#wireplumber.muted {
-    background-color: #f53c3c;
+#taskbar {
+    font-style: normal;
+    font-weight: 500;
+    background-color: @bg;
 }
 
-#temperature {
-    background-color: #f0932b;
+#taskbar button {
+    padding: 0 5px 0 5px;
+    border-radius: 0px;
+    background-color: inherit;
 }
 
-#temperature.critical {
-    background-color: #eb4d4b;
+#taskbar button.minimized {
+    background-color: @highlight;
+}
+
+#clock,
+#language,
+#wireplumber,
+#network,
+#bluetooth,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#custom-keyboard,
+#custom-wlsunset,
+#tray {
+    margin: 0 6px 0 6px;
+
+    padding: 0;
+    font-weight: 500;
+}
+
+#custom-launcher {
+    padding: 0 6px 0 6px;
+    color: @white;
+}
+
+#clock,
+#language,
+#wireplumber,
+#network,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#battery {
+    color: @white;
+}
+
+#leftWrapper {
+    background-color: @bg;
+    color: @white;
+    border-radius: 0px;
+}
+
+#rightWrapper {
+    background-color: @bg;
+    color: @white;
+    padding: 0 0px 0 0px;
+    border-radius: 0px;
+}
+
+#wireplumber.muted,
+#network.disconnected,
+#temparture.critical,
+
+window#waybar.hidden {
+    opacity: 0.0;
 }
 
 #tray {
-    background-color: #000;
+    padding: 0 0px 0 0px;
+    border-radius: 0px;
+    background-color: @bg;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
 }

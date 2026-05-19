@@ -1,0 +1,10 @@
+/*
+*
+* Base16 Gruvbox dark, medium
+* Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+*
+*/
+@define-color bg #fff;
+@define-color highlight #d0d0d0;
+@define-color white #000;
+@define-color alert #fabd2f;
